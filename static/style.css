@@ -1,0 +1,145 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;600;800&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+body {
+    background: #112F63;
+    color: #FFFFFF;
+    font-family: 'Nunito Sans' sans-serif;
+    width: 100%;
+}
+
+.row {
+    padding: 30px 40px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+header {
+    height: 40px;
+    
+}
+
+.logo-container {
+    display: flex;
+}
+
+header .logo {
+    max-width: 45px;
+}
+
+header .logo-text {
+   max-height: 18px;
+   margin: auto 0;
+   padding-left: 15px;
+}
+
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+header ul li {
+    text-align: center;
+    padding: 0 18px;
+}
+
+header ul li a {
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 900;
+    font-family: 'Nunito Sans' sans-serif;
+}
+
+header ul li a:hover {
+    color: #A9A9D5;
+    text-decoration: none;
+    transition: all 300ms;
+}
+
+header .btn {
+    background: linear-gradient(90deg, rgba(67,82,255,1) 0%, rgba(64,39,195,1) 100%);
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: none;
+    font-size: .75rem;
+    font-weight: bold;
+    margin-top: -10px;
+}
+
+header .btn:hover {
+    transform: scale(1.05);
+    transition: ease .3s;
+}
+
+#hero {
+    background: url(./images/ff-hero\ background.png) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    margin-top: -40px;
+}
+
+.intro {
+    width: 850px;
+    margin-top: -110px;
+    text-align: center;
+    margin-bottom: 200px;
+}
+
+.intro p{
+    font-size: 32px;
+    font-family: 'Mukta Vaani', sans-serif;
+    font-weight: 300;
+    color: #5B87FF;
+}
+
+.intro span {
+    color: #95D6F3;
+}
+
+.pools h2{
+    font-size: 2.25rem;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.pools .row {
+    padding: 0 !important; 
+}
+
+.inner {
+    border: 2px solid #4352FF ;
+    border-radius: 10px;
+    padding: 22px 24px;
+}
+
+.inner .row {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.inner .row:after {
+    content: '';
+    display: block;
+    border-bottom: solid 1px grey ;
+
+}
+
+.inner h3 {
+    font-size: 24px;
+    font-family: 'Mukta Vaani', sans-serif;
+    font-weight: regular;
+    margin-bottom: 40px;
+}
+
+
