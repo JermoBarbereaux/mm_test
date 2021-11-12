@@ -28,59 +28,92 @@
                     </ul>
             </div>
             <div class="col-12 col-md-3 text-right">
-                <a href="#" class="btn">connect wallet</a>
+                <a href="#" class="btn connect-wallet">connect wallet</a>
             </div>
         </div>
     </header>
-    
-    <div class="hero-container">
-        <div id="hero"></div>
-        <div class="container intro">
-            <h1>Florence Finance is connecting DeFi to real-world lending</h1>
-            <p>Current capital deployed <span>$225,047,595</span> at an interest of <span>1.85%</span></p>
+    <main>
+        <div class="hero-container">
+            <div id="hero"></div>
+            <div class="container intro">
+                <div class="row">
+                    <div class="col-12">
+                        <h1>Florence Finance is connecting DeFi to real-world lending</h1>
+                <p>Current capital deployed <span>$225,047,595</span> at an interest of <span>1.85%</span></p>
+                    </div>
+                </div>
+                
+            </div>
         </div>
-    </div>
-
-    <div class="spacer"></div>
-
-    <div class="container pools">
-        <h2>Pools</h2>
-        <div class="row">  
-            <div class="col-12 col-md-4 pool-col">
-                <div class="inner">
-                    <h3>Junior 100% collateralized</h3>
-                    <div class="row">
-                        <div class="col-6">TVL</div>
-                        <div class="col-6">5M EUR</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">APY</div>
-                        <div class="col-6">20%</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">Earn</div>
-                        <div class="col-6">USDC & MDC</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">Participants</div>
-                        <div class="col-6">100</div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <a href="#" class="button">deposit</a>
+    
+        <div class="container pools">
+            <h2>Pools</h2>
+            <div class="row">  
+                <div class="col-12 col-md-4 pool-col">
+                    <div class="inner">
+                        <h3>Junior 100% collateralized</h3>
+                        <div class="row">
+                            <div class="col-6 text-left">TVL</div>
+                            <div class="col-6 text-right">5M EUR</div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <p>details <i class="fas fa-angle-down"></i></p> 
+                        <div class="row">
+                            <div class="col-6 text-left">APY</div>
+                            <div class="col-6 text-right">20%</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">Earn</div>
+                            <div class="col-6 text-right">USDC & MDC</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">Participants</div>
+                            <div class="col-6 text-right">100</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                               <button>deposit</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p class="details">details <i class="fas fa-angle-down"></i></p> 
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-4 pool-col">
-                <div class="inner">
-                <h3>Senior 100% collateralized</h3>
-              
+                <div class="col-12 col-md-4 pool-col">
+                    <div class="inner">
+                    <h3>Senior 100% collateralized</h3>
+                        <div class="row">
+                            <div class="col-6 text-left">TVL</div>
+                            <div class="col-6 text-right">5M EUR</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">APY</div>
+                            <div class="col-6 text-right">20%</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">Earn</div>
+                            <div class="col-6 text-right">USDC & MDC</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 text-left">Participants</div>
+                            <div class="col-6 text-right">100</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <button>deposit</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p class="details">details <i class="fas fa-angle-down"></i></p> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 pool-col">
+                    <div class="inner">
+                    <h3>TBD</h3>
                     <div class="row">
                         <div class="col-6 text-left">TVL</div>
                         <div class="col-6 text-right">5M EUR</div>
@@ -99,51 +132,105 @@
                     </div>
                     <div class="row">
                         <div class="col-12 text-center">
-                            <a href="#" class="button">deposit</a>
+                            <button>deposit</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 text-center">
-                            <p>details <i class="fas fa-angle-down"></i></p> 
+                            <p class="details">details <i class="fas fa-angle-down"></i></p> 
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 pool-col">
-                <div class="inner">
-                <h3>TBD</h3>
+        </div>
+    </main>
+
+    <!-- modal content -->
+    <div id="walletModal" class="modal">
+        <div class="container">
+            <div class="modal-content">
+                <span class="close"><p>&times;</p></span>
+
+                <img class="modal-logo" src="./static/images/Florencelogo_purple Copy.png" alt="">
+                <h2 class="title">Connect Wallet</h2>
+                <p class="desc">To start using Florence Finance</p>
+
+                <a class="url" href="">
                     <div class="row">
-                        <div class="col-6">TVL</div>
-                        <div class="col-6">5M EUR</div>
+                        <img class="wallet-icon"  src="./static/images/meta.svg" alt="metamask">
+                        <p class="name">Metamask</p>
+                        <img src="./static/images/arrow_right.svg" alt="" class="arrow">                
                     </div>
+                </a>
+                <a class="url" href="">
                     <div class="row">
-                        <div class="col-6">APY</div>
-                        <div class="col-6">20%</div>
+                        <img class="wallet-icon"  src="./static/images/ledger.svg" alt="metamask">
+                        <p class="name">Ledger</p>
+                        <img src="./static/images/arrow_right.svg" alt="" class="arrow">                
                     </div>
+                </a>
+                <a class="url" href="">
                     <div class="row">
-                        <div class="col-6">Earn</div>
-                        <div class="col-6">USDC & MDC</div>
+                        <img class="wallet-icon"  src="./static/images/wallet.svg" alt="metamask">
+                        <p class="name">Wallet</p>
+                        <img src="./static/images/arrow_right.svg" alt="" class="arrow">                
                     </div>
+                </a>
+                <a class="url" href="">
                     <div class="row">
-                        <div class="col-6">Participants</div>
-                        <div class="col-6">100</div>
+                        <img class="wallet-icon"  src="./static/images/coinbase.svg" alt="metamask">
+                        <p class="name">Coinbase</p>
+                        <img src="./static/images/arrow_right.svg" alt="" class="arrow">                
                     </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <a href="#" class="button">deposit</a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 text-center">
-                            <p>details <i class="fas fa-angle-down"></i></p> 
-                        </div>
-                    </div>  
+                </a>
+                <div class="row">
+                    <p class="tos">
+                        By connecting, I accept Florence Finance’s
+                        <a href="#">Terms of Service</a>
+                    </p>
                 </div>
-                 
+       
+              </div> 
             </div>
         </div>
         
-    </div>
-    
+    <!-- modal content -->
+
+    <footer id="bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-2 footer-col d-none d-md-block">
+                    <img src="./static/images/Florencelogo_purple Copy.png" alt="">
+                </div>
+                <div class="col-4 col-md-2 footer-col">
+                    <p>Protocol</p>
+                    <ul>
+                       <li><a href="#">Pools</a></li>
+                        <li><a href="#">Prices</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Docs</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2 footer-col">
+                    <p>Governence</p>
+                    <ul>
+                       <li><a href="#">Overview</a></li>
+                        <li><a href="#">MDC</a></li>
+                        <li><a href="#">Leaderboard</a></li>
+                        <li><a href="#">Forums</a></li>
+                    </ul>
+                </div>
+                <div class="col-4 col-md-2 footer-col">
+                    <p>Company</p>
+                    <ul>
+                       <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="./static/main.js"></script>
+    </footer>
 </body>
 </html>

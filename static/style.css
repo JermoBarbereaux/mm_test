@@ -1,10 +1,25 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;600;800&family=Nunito+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;800&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+/* Variables */
+:root {
+    --primary: #4352FF;
+    --bg: #112F63;
+    --text: #FFFFFF;
+    --text-alt: #5B87FF;
+    --text-alt-light: #95D6F3; 
+    --border: #2e4a79;
+    --link-hover: #A9A9D5;
+
+    --transition: ease .3s;
+}
+
+/* base styling start */
 
 body {
-    background: #112F63;
-    color: #FFFFFF;
+    background: var(--bg);
+    color:var(--text);
     font-family: 'Nunito Sans' sans-serif;
     width: 100%;
 }
@@ -15,8 +30,11 @@ body {
 
 h1 {
     font-size: 3.5rem;
+    line-height: 1;
 }
+/* base styling end */
 
+/* header start */
 header {
     height: 40px;
     
@@ -51,22 +69,23 @@ header ul li {
 }
 
 header ul li a {
-    color: #FFFFFF;
+    color: var(--text);
     text-transform: uppercase;
     font-size: .75rem;
     font-weight: 900;
     font-family: 'Nunito Sans' sans-serif;
 }
 
-header ul li a:hover {
-    color: #A9A9D5;
+header ul li a:hover,
+header ul li a:focus {
+    color: var(--link-hover);
     text-decoration: none;
-    transition: all 300ms;
+    transition: var(--transition);
 }
 
 header .btn {
     background: linear-gradient(90deg, rgba(67,82,255,1) 0%, rgba(64,39,195,1) 100%);
-    color: #FFFFFF;
+    color: var(--text);
     text-transform: uppercase;
     padding: 15px 25px;
     border-radius: 8px;
@@ -76,11 +95,14 @@ header .btn {
     margin-top: -10px;
 }
 
-header .btn:hover {
+header .btn:hover,
+header .btn:focus {
     transform: scale(1.05);
-    transition: ease .3s;
+    transition: var(--transition);
 }
+/* header end */
 
+/* Hero start */
 #hero {
     background: url(./images/ff-hero\ background.png) no-repeat;
     background-size: cover;
@@ -90,25 +112,33 @@ header .btn:hover {
 }
 
 .intro {
-    width: 850px;
-    margin-top: -110px;
+    margin-top: -120px;
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 130px;
 }
 
 .intro p{
     font-size: 32px;
     font-family: 'Mukta Vaani', sans-serif;
     font-weight: 300;
-    color: #5B87FF;
+    color: var(--text-alt);
+    line-height: 1.375;
+    padding-top: 10px;
 }
 
 .intro span {
-    color: #95D6F3;
+    color: var(--text-alt-light);
+}
+/* hero end */
+
+/* Pools columns start */
+.pools {
+    margin-bottom: 150px;
 }
 
 .pools h2{
     font-size: 2.25rem;
+    line-height: 1.389;
     margin-bottom: 50px;
     font-weight: 700;
 }
@@ -118,9 +148,12 @@ header .btn:hover {
 }
 
 .inner {
-    border: 2px solid #4352FF ;
+    border: 2px solid var(--primary) ;
     border-radius: 10px;
     padding: 22px 24px;
+    padding-bottom: 0;
+    position: relative;
+    margin-bottom: 15px;
 }
 
 .inner .row {
@@ -128,18 +161,283 @@ header .btn:hover {
     margin-bottom: 30px;
 }
 
-.inner .row:after {
+.inner .row:last-of-type {
+    margin-bottom: 0;
+}
+
+.inner .row:not(:first-of-type):after {
     content: '';
     display: block;
-    border-bottom: solid 1px grey ;
-
+    height: 1px;
+    width: 100%;
+    background: var(--border);
+    position: absolute;
+    left: 0;
+    margin-top: -15px;
 }
 
 .inner h3 {
     font-size: 24px;
     font-family: 'Mukta Vaani', sans-serif;
-    font-weight: regular;
+    font-weight: normal;
     margin-bottom: 40px;
 }
 
+.inner .details, button {
+    font-size: .75rem;
+    text-transform: uppercase;
+    font-weight: 800;
+}
 
+.inner .details {
+    color: var(--text-alt);
+}
+
+.inner .details i {
+    padding-left: 5px;
+    font-size: .75rem;
+}
+
+.inner button {
+    background: var(--primary);
+    padding: 15px 40px;
+    border-radius: 6px;
+    border: none;
+    color: var(--text);
+    width: 100%;
+    margin: 10px 0 ;
+}
+
+.inner button:hover,
+.inner button:focus {
+    cursor: pointer;
+    background: var(--text);
+    color: var(--primary);
+    transition: var(--transition);
+}
+/* Pool columns end */
+
+/* Footer start */
+#bottom {
+    margin-bottom: 60px;
+}
+
+#bottom .container .row {
+    padding: 0;
+}
+
+#bottom .footer-col img {
+    max-width: 45px;
+}
+
+#bottom .footer-col p {
+    font-size: 1rem;
+    color: var(--text);
+    font-family: 'Mukta Vaani', sans-serif;
+    font-weight: 600;
+}
+
+#bottom .footer-col ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+#bottom .footer-col ul li a {
+    font-size: 1rem;
+    color: var(--link-hover);
+    font-family: 'Mukta Vaani', sans-serif;
+    font-weight: normal;
+    line-height: 2.125;
+}
+
+#bottom .footer-col ul li a:hover,
+#bottom .footer-col ul li a:focus {
+    text-decoration: none;
+    color: var(--text);
+    transition: var(--transition) ;
+}
+
+/* Footer end */
+
+
+/* Modal start */
+.modal {
+display: none; 
+position: fixed; 
+z-index: 1; 
+left: 0;
+top: 0;
+opacity: 0;
+width: 100%; 
+height: 100%; 
+overflow: auto; 
+background-color: rgb(0,0,0); 
+background-color: RGBA(4, 12, 26, 0.8);
+transition: all .3s linear;
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: var(--bg);
+font-family: 'Mukta Vaani', sans-serif;
+margin: 15% auto; 
+padding: 20px;
+padding-bottom: 0;
+border: 2px solid var(--primary);
+border-radius: 10px;
+width: 375px;
+
+}
+
+.modal-content .modal-logo {
+    width: 45px;
+    margin: 0 auto;
+}
+
+.modal-content .title {
+    font-size: 1.25rem;
+    text-align: center;
+    padding-top: 20px;
+    margin-bottom: 0;
+}
+
+.modal-content .desc {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--link-hover);
+    letter-spacing: 0.5;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.modal-content .row {
+    padding: 30px 20px;
+}
+
+.modal-content .url:hover,
+.modal-content .url:focus {
+text-decoration: none;
+}
+
+.modal-content .url:hover .arrow,
+.modal-content .url:focus .arrow  {
+filter: brightness(0) invert(1);
+transform: translateX(5px);
+transition: var(--transition);
+}
+
+.modal-content .row:last-of-type {
+    padding-bottom: 0;
+}
+
+.modal-content .row:after {
+content: '';
+display: block;
+height: 1px;
+width: 100%;
+background: var(--border);
+position: absolute;
+left: 0;
+margin-top: -15px;
+}
+
+.modal-content .wallet-icon {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+.modal-content .name, .arrow {
+margin: auto 0;
+}
+
+.modal-content .name, .tos {
+font-size: 1rem;
+font-weight: normal;
+color: var(--text);
+}
+
+.modal-content .arrow {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.modal-content .tos {
+    color: var(--link-hover);
+    line-height: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 90%;
+}
+
+.modal-content .tos a {
+    color: var(--primary);
+}
+
+.modal-content .tos a:hover,
+.modal-content .tos a:focus {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.close {
+color: var(--link-hover);
+float: right;
+font-size: 28px;
+font-weight: normal;
+padding-right: 5px;
+text-align: right;
+}
+
+.close p {
+    font-size: 3rem;
+    font-weight: lighter;
+    margin-bottom: -10px;
+    margin-top: -15px;
+}
+
+.close:hover,
+.close:focus {
+color: var(--text);
+text-decoration: none;
+transition: var(--transition);
+cursor: pointer;
+}
+
+.is-visible {
+    display: block;
+}
+  
+.is-open {
+    opacity: 1;
+}
+
+/* modal end */
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+.inner h3 {
+    min-height: 58px;
+}
+}
+
+@media only screen and (max-width: 900px) {
+header .row div:last-of-type  {
+    text-align: center !important;
+}
+
+header .row div:last-of-type a {
+    margin-top: 5px;
+}
+}
+
+@media only screen and (max-width: 900px) {
+.modal-content {
+    width: 80%; 
+}
+}
